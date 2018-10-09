@@ -51,8 +51,6 @@ class TranslatePlugin implements Plugin<Project> {
                 true).body()
 
         //Json 解析
-        System.out.println("Response was: " + response)
-
         def responseBean = mJsonSlurper.parseText(response)
 
         String result = ''
