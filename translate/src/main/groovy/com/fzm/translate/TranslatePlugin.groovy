@@ -24,25 +24,19 @@ class TranslatePlugin implements Plugin<Project> {
 
                     if (file.file && file.name.contains("strings")) {
 
-                        println("fileName:" + file.name)
-
                         //读取汉字xml文件
                         Map<String, String> map = parseStringXml(file)
-                        println("fileContent:" + map)
-                        println("===========================")
 
                         //对汉字进行翻译处理
                         Map<String, String> newMap = new HashMap<>()
-                        map.each {entry->
+                        map.each { entry ->
 
                             String newValue = translate(entry.value.toString())
                             newMap.put(entry.key.toString(), newValue.toString())
-                            println("key:"+entry.key+" value:"+entry.value)
-
                         }
 
                         //写到新文件中
-                        writeFile(new File(enValuesDir, "test_"+file.name), newMap)
+                        writeFile(new File(enValuesDir, file.name), newMap)
                     }
                 }
             }
