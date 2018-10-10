@@ -19,11 +19,15 @@ plugins {
 
 ## 结果
 
-成功后res -> values-en会生成对应的英文资源文件
+执行成功后会在values-en目录生成对应的英文资源文件
 
 
 ## 预览
 
-![pic](https://github.com/xiaobaoyihao/android-translate-plugin/blob/master/pic.png)
+- values中所有命名包含string的字符串资源文件
 
-![执行后生成的文件](https://github.com/xiaobaoyihao/android-translate-plugin/blob/master/pic2.png)
+  ![pic](https://github.com/xiaobaoyihao/android-translate-plugin/blob/master/pic.png)
+
+- values-en目录的strings.xml文件内容
+
+  ![执行后生成的文件](https://github.com/xiaobaoyihao/android-translate-plugin/blob/master/pic2.png)
