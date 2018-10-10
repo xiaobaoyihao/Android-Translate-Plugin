@@ -43,6 +43,12 @@ class TranslatePlugin implements Plugin<Project> {
         }
     }
 
+    /**
+     * 翻译API参考了https://github.com/zyj1609wz/AndroidPluginTranslate/blob/master/src/util/HttpManager.java
+     * 有道账号
+     * @param query
+     * @return
+     */
     private String translate(String query) {
 
 
